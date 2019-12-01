@@ -1,9 +1,14 @@
-
 body {
 	margin: 0; 
 	box-sizing: border-box;
-	background-color: beige;
+	background-color: #E6E6E9;
 }
+
+/*
+============================
+Header
+============================
+*/
 
 header {
 	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
@@ -12,7 +17,7 @@ header {
 	background-size: cover;
 	height: 30em;
 	width: 100%;
-	box-shadow: 0.4em 0.06em 0.4em grey;
+	box-shadow: 0.4em 0.06em 0.4em grey; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
 
 header nav {
@@ -59,3 +64,97 @@ header li:nth-of-type(1) img {
 	width: 4em; 
 }
 
+/*
+============================
+Filter section
+============================
+*/
+
+h1 {
+	text-align: center; 
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+}
+
+h2 {
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	background-color: aliceblue; 
+}
+
+/*
+============================
+article 
+============================
+*/
+
+section > article {
+	background-color: white; 
+	margin: 1.5em; 
+	padding-bottom: 1em; 
+	box-shadow: inset 0 -0.15em #D8D8D8;
+}
+
+section > article > img:first-of-type { /*de afbeelding van het verhaal*/
+	width: 100%;
+	height: 15em;
+}
+
+h3 { /*titel van het verhaal*/
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-weight: normal; 
+	font-size: 1.5em;
+	margin: 0.5em 0.8em 0 0.8em; 
+}
+
+section > article > footer:first-of-type { /*ranking+aantal*/
+	display: flex; 
+	align-items: center;
+}
+
+section > article > footer > img { /*ranking verhaal*/
+	height: 1em; 
+	margin-left: 0.8em; 
+}
+
+article > footer > p { /*ranking aantal*/
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-size: 0.7em;  
+	margin-left: 0.5em;
+}
+
+
+
+article > p { /*samenvatting verhaal*/
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-size: 1em;
+	margin: 1em 1em 1.4em 1em; 	
+}
+
+article > footer:nth-of-type(2) {
+	display: flex; 
+	align-items: center; 
+}
+
+article > footer > a {
+	margin-left: 0.8em; 
+	margin-right: 0.8em;
+}
+
+article > footer > a:nth-of-type(2) {
+	margin-right: 0; 
+}
+
+article > footer > a:first-of-type { /* lees meer button */
+	margin-right: auto; /* opschuiven naar de andere kant */
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-size: 1em; 
+	padding: 0.61em 1.1em;
+	background-color: #EF9830; 
+	text-decoration: none;
+	border-radius: 0.3em; 
+	color: white; 
+	box-shadow: inset 0 -0.1em #DD8D2F /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+}
+
+article > footer > a > img { /*comment en toevoegen*/
+	width: 2.4em; 
+}
