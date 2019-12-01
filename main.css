@@ -10,6 +10,7 @@ Header
 ============================
 */
 
+/* gehele header*/ 
 header {
 	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
 	background-repeat: no-repeat; 
@@ -17,9 +18,10 @@ header {
 	background-size: cover;
 	height: 30em;
 	width: 100%;
-	box-shadow: 0.4em 0.06em 0.4em grey; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: 0.4em 0.06em 0.4em grey; 
 }
 
+/*header balk*/
 header nav {
 	background-color: #ffffff; 
 	margin: 0; 
@@ -28,6 +30,7 @@ header nav {
 	position: fixed; 
 }
 
+/*in de balk*/
 header ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
@@ -86,49 +89,75 @@ article
 ============================
 */
 
-section > article {
-	background-color: white; 
+section:nth-of-type(2) {
+	display: grid; 
+	grid-gap: 1.5em; 
 	margin: 1.5em; 
-	padding-bottom: 1em; 
-	box-shadow: inset 0 -0.15em #D8D8D8;
 }
 
-section > article > img:first-of-type { /*de afbeelding van het verhaal*/
+/*het gehele artikel */
+section > article {
+	background-color: white; 
+	padding-bottom: 1em; 
+	box-shadow: inset 0 -0.15em #D8D8D8; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+}
+
+/*grid artikelen media */
+@media (min-width: 36em) {
+	section:nth-of-type(2) {
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+		margin: 2em; 
+	}
+}
+@media (min-width: 64em) {
+	section:nth-of-type(2) {
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr; 	
+	}
+}
+
+/*de afbeelding van het verhaal*/
+section > article > img:first-of-type { 
 	width: 100%;
 	height: 15em;
 }
 
-h3 { /*titel van het verhaal*/
+/*titel van het verhaal*/
+h3 { 
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-weight: normal; 
 	font-size: 1.5em;
 	margin: 0.5em 0.8em 0 0.8em; 
 }
 
-section > article > footer:first-of-type { /*ranking+aantal*/
+/*ranking+aantal*/
+section > article > footer:first-of-type { 
 	display: flex; 
 	align-items: center;
 }
 
-section > article > footer > img { /*ranking verhaal*/
+/*ranking verhaal*/
+section > article > footer > img { 
 	height: 1em; 
 	margin-left: 0.8em; 
 }
 
-article > footer > p { /*ranking aantal*/
+/*ranking tekst*/
+article > footer > p { 
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-size: 0.7em;  
 	margin-left: 0.5em;
 }
 
-
-
-article > p { /*samenvatting verhaal*/
+/*samenvatting verhaal*/
+article > p { 
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-size: 1em;
 	margin: 1em 1em 1.4em 1em; 	
 }
 
+/*lees meer + add + comment */
 article > footer:nth-of-type(2) {
 	display: flex; 
 	align-items: center; 
@@ -139,11 +168,13 @@ article > footer > a {
 	margin-right: 0.8em;
 }
 
+/*comment*/
 article > footer > a:nth-of-type(2) {
 	margin-right: 0; 
 }
 
-article > footer > a:first-of-type { /* lees meer button */
+/* lees meer button */
+article > footer > a:first-of-type { 
 	margin-right: auto; /* opschuiven naar de andere kant */
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-size: 1em; 
@@ -155,6 +186,20 @@ article > footer > a:first-of-type { /* lees meer button */
 	box-shadow: inset 0 -0.1em #DD8D2F /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
 
-article > footer > a > img { /*comment en toevoegen*/
+/*comment en toevoegen*/
+article > footer > a > img { 
 	width: 2.4em; 
+}
+
+@media (min-width: 36em) {
+	section > article:first-of-type {
+		grid-column-start: 1;
+		grid-column-end: 3; 
+	}
+}
+@media (min-width: 64em) {
+	section > article:first-of-type {
+		grid-column-start: 1; 
+		grid-column-end: 4; 
+	}
 }
