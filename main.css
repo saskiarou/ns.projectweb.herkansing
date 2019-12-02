@@ -22,7 +22,7 @@ header {
 }
 
 /*header balk*/
-header nav {
+header > nav {
 	background-color: #ffffff; 
 	margin: 0; 
 	height: 4em; 
@@ -31,17 +31,17 @@ header nav {
 }
 
 /*in de balk*/
-header ul {
+header > nav > ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
 	padding: 0em 2em; 
 }
 
-header li {
+header > nav > ul > li {
 	list-style-type: none; /* geen bolletje voor li items */
 }
 
-header a {
+header > nav > ul > li > a {
 	text-decoration: none; /* geen link onder text */
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
@@ -50,16 +50,16 @@ header a {
 	color: rgb(5, 51, 128); 
 }
 
-header li:nth-of-type(2) {
+header > nav > ul > li:nth-of-type(2) {
 	margin-right: auto; /* opschuiven naar de andere kant */
 	padding-left: 0.5em; 
 }
 
-header li:nth-of-type(4) {
+header > nav > ul > li:nth-of-type(4) {
 	margin-left: 0.5em; 
 }
 
-header img {
+header > nav > ul > li > a > img {
 	width: 2em;
 }
 
@@ -89,93 +89,122 @@ article
 ============================
 */
 
+/*section alle artikelen */
 section:nth-of-type(2) {
 	display: grid; 
-	grid-gap: 1.5em; 
+	grid-template-columns: 1fr; 
 	margin: 1.5em; 
+	grid-gap: 1.5em; 
 }
-
-/*het gehele artikel */
-section > article {
-	background-color: white; 
-	padding-bottom: 1em; 
-	box-shadow: inset 0 -0.15em #D8D8D8; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
-}
-
-/*grid artikelen media */
-@media (min-width: 36em) {
+@media (min-width: 34em) {
 	section:nth-of-type(2) {
-		display: grid; 
+		display: grid;
 		grid-template-columns: 1fr 1fr; 
-		margin: 2em; 
+		grid-gap: 1.5em; 
 	}
 }
 @media (min-width: 64em) {
 	section:nth-of-type(2) {
 		display: grid; 
-		grid-template-columns: 1fr 1fr 1fr; 	
+		grid-template-columns: 1fr 1fr 1fr; 
+		grid-gap: 1.5em; 
 	}
 }
 
-/*de afbeelding van het verhaal*/
-section > article > img:first-of-type { 
-	width: 100%;
-	height: 15em;
+/*los artikel */
+section > article {
+	background-color: white; 
 }
 
+@media (min-width: 34em) {
+	section > article:first-of-type {
+		grid-column-start: 1;
+		grid-column-end: 3; 
+		display: grid; 
+		grid-template-columns: 1fr 1fr; 
+	}
+}
+@media (min-width: 64em) {
+	section > article:first-of-type {
+		grid-column-start: 1;
+		grid-column-end: 4; 
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr 1fr; /*in het artikel zelf*/
+	}
+}
+
+/*afbeelding verhaal*/
+section > article > div > img {
+	width: 100%; 	
+	height: 15em; 
+}
+
+/*@media (min-width:36em) { ????????
+	section > article > div > img {
+		grid-column-start: 1; 
+		grid-column-end: 3; 
+	}
+}
+@media (min-width: 64em) {
+	section > article > div > img {
+		grid-column-start: 1; 
+		grid-column-end: 3;
+		width: 100%; 
+	}
+} */
+
+
+@media (min-width: 64em) { /*tekst opschuiven naar tweede helft*/
+	section > article:first-of-type > div:nth-of-type(2) {
+		grid-column-start: 3; 
+		grid-column-end: 5;
+	}
+} 
+/*
+@media (min-width: 64em) { ????????????
+	section > article:first-of-type > div > img {
+		grid-column-start: 1; 
+		grid-column-end: 3; 
+		width: 100%; 
+	}
+}
+*/
+
 /*titel van het verhaal*/
-h3 { 
+h3 {
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-weight: normal; 
 	font-size: 1.5em;
-	margin: 0.5em 0.8em 0 0.8em; 
+	margin-bottom: 0; 
+	margin-top: 0.8em; 
 }
 
-/*ranking+aantal*/
-section > article > footer:first-of-type { 
-	display: flex; 
-	align-items: center;
-}
-
-/*ranking verhaal*/
-section > article > footer > img { 
+/*sterren*/
+section > article > div > footer > img {
 	height: 1em; 
-	margin-left: 0.8em; 
+	padding: 0; 
 }
 
-/*ranking tekst*/
-article > footer > p { 
+/*aantal stemmen*/
+section > article > div > footer > p {
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-size: 0.7em;  
-	margin-left: 0.5em;
 }
 
-/*samenvatting verhaal*/
-article > p { 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	font-size: 1em;
-	margin: 1em 1em 1.4em 1em; 	
-}
-
-/*lees meer + add + comment */
-article > footer:nth-of-type(2) {
+/*sterren en aantal samen*/
+section > article > div > footer:first-of-type {
 	display: flex; 
 	align-items: center; 
 }
 
-article > footer > a {
-	margin-left: 0.8em; 
-	margin-right: 0.8em;
+/*samenvatting verhaal*/
+section > article > div > p { 
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-size: 1em;
 }
 
-/*comment*/
-article > footer > a:nth-of-type(2) {
-	margin-right: 0; 
-}
-
-/* lees meer button */
-article > footer > a:first-of-type { 
-	margin-right: auto; /* opschuiven naar de andere kant */
+/*lees meer button*/
+section > article > div > footer > a:first-of-type {
 	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
 	font-size: 1em; 
 	padding: 0.61em 1.1em;
@@ -183,23 +212,21 @@ article > footer > a:first-of-type {
 	text-decoration: none;
 	border-radius: 0.3em; 
 	color: white; 
-	box-shadow: inset 0 -0.1em #DD8D2F /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.1em #DD8D2F; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	margin-right: auto; 
 }
 
-/*comment en toevoegen*/
-article > footer > a > img { 
+/*comment en plus*/
+section > article > div > footer > a > img {
 	width: 2.4em; 
 }
 
-@media (min-width: 36em) {
-	section > article:first-of-type {
-		grid-column-start: 1;
-		grid-column-end: 3; 
-	}
+/*lees meer + comment + plus*/
+section > article > div > footer:nth-of-type(2) {
+	display: flex; 
+	align-items: center; 
 }
-@media (min-width: 64em) {
-	section > article:first-of-type {
-		grid-column-start: 1; 
-		grid-column-end: 4; 
-	}
+
+section > article > div:nth-of-type(2) {
+	padding: 0 0.8em 0.8em 0.8em; 
 }
