@@ -1,0 +1,77 @@
+body {
+	margin: 0; 
+	box-sizing: border-box;
+	background-color: #E6E6E9;
+}
+
+/*
+============================
+Header
+============================
+*/
+
+/* gehele header*/ 
+header {
+	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover;
+	height: 30em;
+	width: 100%;
+	box-shadow: 0.4em 0.06em 0.4em grey; 
+}
+
+/*header balk*/
+header > nav {
+	background-color: #ffffff; 
+	margin: 0; 
+	height: 4em; 
+	width: 100%; 
+	position: fixed; 
+}
+
+/*in de balk*/
+header > nav > ul {
+	display: flex;
+	align-items: center; /* li items in het midden */
+	padding: 0em 1.5em; 
+}
+
+header > nav > ul > li {
+	list-style-type: none; /* geen bolletje voor li items */
+}
+
+header > nav > ul > li > a {
+	text-decoration: none; /* geen link onder text */
+	display: flex; 	/* text in een rij met afbeelding */ 
+	align-items: center; /* in het midden zetten */ 
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	text-decoration: none;
+	color: rgb(5, 51, 128); 
+}
+
+header > nav > ul > li:nth-of-type(2) {
+	margin-right: auto; /* opschuiven naar de andere kant */
+	padding-left: 0.5em; 
+}
+
+header > nav > ul > li:nth-of-type(4) {
+	margin-left: 0.5em; 
+}
+
+header > nav > ul > li > a > img {
+	width: 2em;
+}
+
+header li:nth-of-type(1) img {
+	width: 4em; 
+}
+
+header > nav > ul > li > a > div {
+	display: none;
+}
+@media (min-width: 36em)  {
+	header > nav > ul > li > a > div {
+		display: inline; 
+}
+}
