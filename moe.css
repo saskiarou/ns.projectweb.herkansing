@@ -67,23 +67,3 @@ header > nav > ul > li > a > div {
 	}
 }
 
-/*
-============================
-img
-============================
-*/
-
-main > img {
-	margin-top: 4em; 
-	width: 100%; 
-}
-@media (min-width: 36em) {
-	main > img {
-		content: url(img/verhaal.nichterig.tablet.jpg); /*BRON: https://teamtreehouse.com/community/media-queries-and-header-image-swap*/
-	}
-}
-@media (min-width: 64em) {
-	main > img {
-		content: url(img/verhaal.nichterig.desktop.jpg); /*BRON: https://teamtreehouse.com/community/media-queries-and-header-image-swap*/
-	}
-}
