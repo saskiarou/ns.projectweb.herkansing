@@ -93,6 +93,54 @@ h2 {
 	background-color: aliceblue; 
 }
 
+.filters {
+	display: none; 
+}
+
+/*
+============================
+Sorteren
+============================
+*/
+
+section > form > fieldset {
+	border: none; 
+	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-size: 0.8em; 
+	padding-left: 1.5em; 
+	padding-bottom: 0; 
+}
+
+
+
+/*
+============================
+filter
+============================
+*/
+
+h1 {
+	display: none; 
+}
+
+section > h2 {
+	margin-left: 1.5em; 
+	margin-right: 1.5em; 
+	padding: 0.5em;
+	font-size: 1.1em; 
+	font-weight: 100; 
+	text-align: center; 
+	background-color: #EF9830; 
+	color: white; 
+	box-shadow: inset 0 -0.1em #DD8D2F;
+	border-radius: 0.3em; 
+}
+
+
+
+
+
+
 /*
 ============================
 article 
@@ -124,14 +172,16 @@ section:nth-of-type(2) {
 /*los artikel */
 section > article {
 	background-color: white; 
+	box-shadow: inset 0 -0.1em darkgrey; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
 
+/*
 @media (min-width: 34em) {
 	section > article:first-of-type {
 		grid-column-start: 1;
 		grid-column-end: 3; 
 		display: grid; 
-		grid-template-columns: 1fr 1fr; 
+		grid-template-columns: 1fr 1fr;
 	}
 }
 @media (min-width: 64em) {
@@ -139,46 +189,39 @@ section > article {
 		grid-column-start: 1;
 		grid-column-end: 4; 
 		display: grid; 
-		grid-template-columns: 1fr 1fr 1fr 1fr; /*in het artikel zelf*/
-	}
-}
-
-/*afbeelding verhaal*/
-section > article > div > img {
-	width: 100%; 	
-	height: 15em; 
-}
-
-/*@media (min-width:36em) { ????????
-	section > article > div > img {
-		grid-column-start: 1; 
-		grid-column-end: 3; 
-	}
-}
-@media (min-width: 64em) {
-	section > article > div > img {
-		grid-column-start: 1; 
-		grid-column-end: 3;
-		width: 100%; 
-	}
-} */
-
-
-@media (min-width: 64em) { /*tekst opschuiven naar tweede helft*/
-	section > article:first-of-type > div:nth-of-type(2) {
-		grid-column-start: 3; 
-		grid-column-end: 5;
-	}
-} 
-/*
-@media (min-width: 64em) { ????????????
-	section > article:first-of-type > div > img {
-		grid-column-start: 1; 
-		grid-column-end: 3; 
-		width: 100%; 
+		grid-template-columns: 1fr 1fr 1fr 1fr; /*in het artikel zelf
 	}
 }
 */
+
+/*afbeelding verhaal*/
+section > article > div > img {
+	/*width: 100%; 	
+	height: 15em; */
+	max-width: 100%;
+ 	height: auto;
+}
+
+/*@media (min-width:36em) { 
+	section > article:first-of-type > div > img:first-of-type {
+		grid-column-start: 1; 
+		grid-column-end: 4; 
+		max-width: 100%;
+ 		height: auto;
+	}
+}
+@media (min-width: 64em) {
+	section > article > div > img:first-of-type {
+		grid-column-start: 1; 
+		grid-column-end: 4;
+		max-width: 100%;
+ 		height: auto;
+		 
+	}
+} 
+
+*/
+
 
 /*titel van het verhaal*/
 h3 {
