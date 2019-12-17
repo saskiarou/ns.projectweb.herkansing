@@ -3,14 +3,13 @@ body {
 	box-sizing: border-box;
 	background-color: #E6E6E9;
 }
-
 /*
 ============================
 Header
 ============================
 */
 
-/* gehele header*/ 
+/*GEHELE HEADER*/ 
 header {
 	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
 	background-repeat: no-repeat; 
@@ -21,16 +20,17 @@ header {
 	box-shadow: 0.4em 0.06em 0.4em grey; 
 }
 
-/*header balk*/
+/*NAV BALK*/
 header > nav {
 	background-color: #ffffff; 
 	margin: 0; 
 	height: 4em; 
 	width: 100%; 
 	position: fixed; 
+	top: 0;
 }
 
-/*in de balk*/
+/*ELEMENTEN IN DE BALK*/
 header > nav > ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
@@ -45,7 +45,7 @@ header > nav > ul > li > a {
 	text-decoration: none; /* geen link onder text */
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-family: 'Open Sans', sans-serif; 
 	text-decoration: none;
 	color: rgb(5, 51, 128); 
 }
@@ -67,7 +67,7 @@ header li:nth-of-type(1) img {
 	width: 4em; 
 }
 
-/*tekst header laten verdwijnen*/
+/*TEXT HEADER RESPONSIVE*/
 header > nav > ul > li > a > div {
 	display: none;
 }
@@ -79,64 +79,71 @@ header > nav > ul > li > a > div {
 
 /*
 ============================
-Filter section
-============================
-*/
-
-h1 {
-	text-align: center; 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-}
-
-h2 {
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	background-color: aliceblue; 
-}
-
-.filters {
-	display: none; 
-}
-
-/*
-============================
-Sorteren
-============================
-*/
-
-section > form > fieldset {
-	border: none; 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	font-size: 0.8em; 
-	padding-left: 1.5em; 
-	padding-bottom: 0; 
-}
-
-
-
-/*
-============================
 filter
 ============================
 */
 
-h1 {
-	display: none; 
-}
-
-section > h2 {
-	margin-left: 1.5em; 
-	margin-right: 1.5em; 
-	padding: 0.5em;
-	font-size: 1.1em; 
-	font-weight: 100; 
+/*BUTTON FILTER MOBIEL*/
+main > section:first-of-type { 
+	width: calc(100% - 3em); /*https://stackoverflow.com/questions/17631611/100-width-minus-margin-and-padding*/
+	position: relative; 
+	top: -1.4em;
+	left: 1.5em;
+	border: none;
+	background-color: #137BD0;
+	box-shadow: inset 0 -0.15em #094E9E;/* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	border-radius: 0.3em;
+} 
+h2 {
+	color: white;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em;
 	text-align: center; 
-	background-color: #EF9830; 
-	color: white; 
-	box-shadow: inset 0 -0.1em #DD8D2F;
-	border-radius: 0.3em; 
+	padding: 0.93em 0; 
 }
 
+.alleFilters {
+	display: none;
+}
 
+.toonFilterMenu {/*javascript klik op filters*/
+	display: block;
+	background-color: white;
+	margin: -3em 1.5em;
+	padding: 1em 1em 0 1em;	
+}
+
+/*TITELS FILTERS*/
+h3 { 
+	grid-column-start: 1; 
+	grid-column-end: 3; 
+}
+.filterCategorie {
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+}
+
+.filterCategorie > label {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+}
+
+.filterLengte {
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+}
+
+.filterLengte > label {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+}
+
+alleFilters > button {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	border: none; 
+	background-color: #fec835; 
+}
 
 
 
@@ -147,14 +154,14 @@ article
 ============================
 */
 
-/*section alle artikelen */
+/*GRID ALLE ARTIKELEN*/
 section:nth-of-type(2) {
 	display: grid; 
 	grid-template-columns: 1fr; 
 	margin: 1.5em; 
 	grid-gap: 1.5em; 
 }
-@media (min-width: 34em) {
+@media (min-width: 36em) {
 	section:nth-of-type(2) {
 		display: grid;
 		grid-template-columns: 1fr 1fr; 
@@ -169,10 +176,10 @@ section:nth-of-type(2) {
 	}
 }
 
-/*los artikel */
+/*LOS ARTIKEL*/
 section > article {
 	background-color: white; 
-	box-shadow: inset 0 -0.1em darkgrey; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.15em #C5C5CB; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
 
 /*
@@ -195,11 +202,9 @@ section > article {
 */
 
 /*afbeelding verhaal*/
-section > article > div > img {
-	/*width: 100%; 	
-	height: 15em; */
-	max-width: 100%;
- 	height: auto;
+main > section > article > div > img {	
+	width: 100%;
+ 	height: 15em;   
 }
 
 /*@media (min-width:36em) { 
@@ -222,50 +227,59 @@ section > article > div > img {
 
 */
 
-
-/*titel van het verhaal*/
 h3 {
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	font-weight: normal; 
-	font-size: 1.5em;
-	margin-bottom: 0; 
-	margin-top: 0.8em; 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 1.2em;
+	margin-bottom: 0em; 
+}
+@media (min-width: 36em) {
+	h3 {
+		font-size: 1.4em;
+	}
 }
 
 /*sterren*/
 section > article > div > footer > img {
 	height: 1em; 
-	padding: 0; 
 }
 
 /*aantal stemmen*/
 section > article > div > footer > p {
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.7em;  
 }
-
-/*sterren en aantal samen*/
+/*sterren en aantal samen*/ 
 section > article > div > footer:first-of-type {
 	display: flex; 
 	align-items: center; 
 }
-
 /*samenvatting verhaal*/
 section > article > div > p { 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;  
+	font-size: 0.93em;
+	max-height: 6em;  
+}
+@media (min-width: 36em) {
+	section > article > div > p {
+	max-height: 9em; 
+	}
+}
+@media (min-width: 64em) {
+	section > article > div > p {
+		max-height: 9em;
+	}
 }
 
 /*lees meer button*/
 section > article > div > footer > a:first-of-type {
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
-	font-size: 1em; 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
 	padding: 0.61em 1.1em;
 	background-color: #EF9830; 
 	text-decoration: none;
 	border-radius: 0.3em; 
 	color: white; 
-	box-shadow: inset 0 -0.1em #DD8D2F; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.15em #DD8D2F; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 	margin-right: auto; 
 }
 
@@ -281,10 +295,6 @@ section > article > div > footer:nth-of-type(2) {
 }
 
 section > article > div:nth-of-type(2) {
-	padding: 0 0.8em 0.8em 0.8em; 
+	padding: 0 1.5em 1.5em 1.5em; 
 }
 
-/*test*/
-header > nav > ul > li > a:nth-of-type(3) {
-	display: none;  
-}

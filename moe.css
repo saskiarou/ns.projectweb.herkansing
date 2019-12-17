@@ -10,7 +10,6 @@ Header
 ============================
 */
 
-
 /*header balk*/
 header > nav {
 	background-color: #ffffff; 
@@ -67,3 +66,33 @@ header > nav > ul > li > a > div {
 	}
 }
 
+/*
+============================
+filter
+============================
+*/
+
+h1 {
+	display: none; 
+}
+
+.alleFilters {
+	display: flex; 
+	margin: 1em; 
+}
+
+.labels {
+	background-color: blue;
+}
+
+.labelsCategorie {
+	display: none; 
+}
+
+#label {
+	background-color: grey; 
+}
+.toonMenu {
+	/*background: hotpink;*/
+	display: block; 
+}
