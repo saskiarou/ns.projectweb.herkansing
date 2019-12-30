@@ -3,6 +3,12 @@ body {
 	box-sizing: border-box;
 	background-color: #E6E6E9;
 }
+
+/*@media (min-width: 75em) {
+	main {
+		margin: 2.5em; 
+	}
+}*/
 /*
 ============================
 Header
@@ -24,7 +30,7 @@ header {
 header > nav {
 	background-color: #ffffff; 
 	margin: 0; 
-	height: 4em; 
+	height: 3.75em; 
 	width: 100%; 
 	position: fixed; 
 	top: 0;
@@ -34,7 +40,7 @@ header > nav {
 header > nav > ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
-	padding: 0em 1.5em; 
+	padding: 0 1.31em; 
 }
 
 header > nav > ul > li {
@@ -64,7 +70,7 @@ header > nav > ul > li > a > img {
 }
 
 header li:nth-of-type(1) img {
-	width: 4em; 
+	width: 3.2em; 
 }
 
 /*TEXT HEADER RESPONSIVE*/
@@ -83,71 +89,97 @@ filter
 ============================
 */
 
-/*BUTTON FILTER MOBIEL*/
-main > section:first-of-type { 
-	width: calc(100% - 3em); /*https://stackoverflow.com/questions/17631611/100-width-minus-margin-and-padding*/
+
+main > form {
+	background-color: #137BD0;; 
+	margin: 0 1.5em; 
 	position: relative; 
 	top: -1.4em;
-	left: 1.5em;
-	border: none;
-	background-color: #137BD0;
-	box-shadow: inset 0 -0.15em #094E9E;/* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.15em #094E9E;
 	border-radius: 0.3em;
-} 
-h2 {
-	color: white;
-	font-family: 'Open Sans', sans-serif; 
-	font-size: 0.93em;
-	text-align: center; 
-	padding: 0.93em 0; 
 }
 
-.alleFilters {
-	display: none;
+
+main > form > fieldset:first-of-type {
+	border-style: none;
+	padding: 0; 
 }
 
-.toonFilterMenu {/*javascript klik op filters*/
-	display: block;
-	background-color: white;
-	margin: -3em 1.5em;
-	padding: 1em 1em 0 1em;	
-}
-
-/*TITELS FILTERS*/
-h3 { 
-	grid-column-start: 1; 
-	grid-column-end: 3; 
-}
 .filterCategorie {
-	display: grid;
-	grid-template-columns: 1fr 1fr; 
-}
-
-.filterCategorie > label {
-	font-family: 'Open Sans', sans-serif; 
-	font-size: 0.93em; 
+	display: none;
+	border-style: none; 
 }
 
 .filterLengte {
-	display: grid;
-	grid-template-columns: 1fr 1fr; 
+	display: none; 
+	border-style: none; 
 }
 
-.filterLengte > label {
+main > form > fieldset > legend:first-of-type {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	text-align: center; 
+	color: white;
+	padding-bottom: 0.3em; 
+	padding: 0.93em 0; 
+}
+
+legend {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
 }
 
-alleFilters > button {
+.toonFilterCat {
+	display: block; 
+}
+
+.toonFilterLeng {
+	display: block; 
+}
+
+label {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
-	border: none; 
-	background-color: #fec835; 
+	padding-right: 1.5em;
+}
+
+form > fieldset > div {
+	display: flex; 
+	flex-direction: column; 
+	flex-wrap: wrap; 
+}
+
+form > fieldset > div > label {
+	flex: 1 100%; 
+}
+
+/*
+
+.filterCategorie > label > input {
+	border-style: none; 
 }
 
 
-
-
+@media (min-width: 36em) {
+	main > form > fieldset > legend:first-of-type {
+		font-size: 1.2em; 
+		text-align: left;
+	}
+	.filterCategorie {
+		display: block; 
+		grid-column-start: 1;
+		grid-column-end: 4; 
+	}
+	.filterLengte {
+		display: block; 
+	}
+	main > form > fieldset > div {
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+	main > form > fieldset > div > fieldset > label {
+		padding-right: 1em; 
+	}*/
 /*
 ============================
 article 
@@ -155,24 +187,30 @@ article
 */
 
 /*GRID ALLE ARTIKELEN*/
-section:nth-of-type(2) {
+section:first-of-type {
 	display: grid; 
 	grid-template-columns: 1fr; 
-	margin: 1.5em; 
-	grid-gap: 1.5em; 
+	margin: 0.44em; 
+	grid-gap: 0.875em; 
 }
 @media (min-width: 36em) {
-	section:nth-of-type(2) {
+	section:first-of-type {
 		display: grid;
 		grid-template-columns: 1fr 1fr; 
-		grid-gap: 1.5em; 
+		margin: 0.875em;
+		grid-gap: 1.75em; 
 	}
 }
 @media (min-width: 64em) {
-	section:nth-of-type(2) {
+	section:first-of-type {
 		display: grid; 
 		grid-template-columns: 1fr 1fr 1fr; 
-		grid-gap: 1.5em; 
+		grid-gap: 1.75em; 
+	}
+}
+@media (min-width: 75em) {
+	section:first-of-type {
+		margin: 0.875em 2.5em; 
 	}
 }
 
@@ -182,54 +220,20 @@ section > article {
 	box-shadow: inset 0 -0.15em #C5C5CB; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
 
-/*
-@media (min-width: 34em) {
-	section > article:first-of-type {
-		grid-column-start: 1;
-		grid-column-end: 3; 
-		display: grid; 
-		grid-template-columns: 1fr 1fr;
-	}
-}
-@media (min-width: 64em) {
-	section > article:first-of-type {
-		grid-column-start: 1;
-		grid-column-end: 4; 
-		display: grid; 
-		grid-template-columns: 1fr 1fr 1fr 1fr; /*in het artikel zelf
-	}
-}
-*/
+
 
 /*afbeelding verhaal*/
 main > section > article > div > img {	
 	width: 100%;
- 	height: 15em;   
-}
-
-/*@media (min-width:36em) { 
-	section > article:first-of-type > div > img:first-of-type {
-		grid-column-start: 1; 
-		grid-column-end: 4; 
-		max-width: 100%;
- 		height: auto;
+ 	height: 12em;  
+	object-fit: cover; /*afbeelding schaalt mee, bron: inspector ns.nl*/
 	}
-}
-@media (min-width: 64em) {
-	section > article > div > img:first-of-type {
-		grid-column-start: 1; 
-		grid-column-end: 4;
-		max-width: 100%;
- 		height: auto;
-		 
-	}
-} 
-
-*/
 
 h3 {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 1.2em;
+	font-weight: 400;
+	color: #003082;
 	margin-bottom: 0em; 
 }
 @media (min-width: 36em) {
@@ -241,12 +245,16 @@ h3 {
 /*sterren*/
 section > article > div > footer > img {
 	height: 1em; 
+	margin: 0; 
+	padding: 0.3em 0; 
 }
 
 /*aantal stemmen*/
 section > article > div > footer > p {
 	font-family: 'Open Sans', sans-serif; 
-	font-size: 0.7em;  
+	font-size: 0.7em;
+	margin: 0; 
+	padding-left: 0.3em; 
 }
 /*sterren en aantal samen*/ 
 section > article > div > footer:first-of-type {
@@ -258,6 +266,8 @@ section > article > div > p {
 	font-family: 'Open Sans', sans-serif;  
 	font-size: 0.93em;
 	max-height: 6em;  
+	margin: 0; 
+	padding: 1.25em 0; 
 }
 @media (min-width: 36em) {
 	section > article > div > p {
@@ -294,7 +304,7 @@ section > article > div > footer:nth-of-type(2) {
 	align-items: center; 
 }
 
-section > article > div:nth-of-type(2) {
+main > section > article > div:nth-of-type(2) {
 	padding: 0 1.5em 1.5em 1.5em; 
 }
 
