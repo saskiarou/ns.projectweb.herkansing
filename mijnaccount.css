@@ -10,20 +10,21 @@ Header
 ============================
 */
 
-/*header balk*/
+/*NAV BALK*/
 header > nav {
 	background-color: #ffffff; 
-	height: 4em; 
+	margin: 0; 
+	height: 3.75em; 
 	width: 100%; 
 	position: fixed; 
-	top: 0; 
+	top: 0;
 }
 
-/*in de balk*/
+/*ELEMENTEN IN DE BALK*/
 header > nav > ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
-	padding: 0em 1.5em; 
+	padding: 0 1.31em; 
 }
 
 header > nav > ul > li {
@@ -34,7 +35,7 @@ header > nav > ul > li > a {
 	text-decoration: none; /* geen link onder text */
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-family: 'Open Sans', sans-serif; 
 	text-decoration: none;
 	color: rgb(5, 51, 128); 
 }
@@ -53,7 +54,7 @@ header > nav > ul > li > a > img {
 }
 
 header li:nth-of-type(1) img {
-	width: 4em; 
+	width: 3.2em; 
 }
 
 /*tekst header laten verdwijnen*/
@@ -75,17 +76,17 @@ INLOGGEN
 main {
 	margin: 5.5em 1.5em 1.5em 1.5em; /*wordt om een of andere manier naar boven gedrukt*/
 	background-color: white; 
-	padding: 1em; 
+	padding: 1em 1em 2em 1em; 
 }
 
-main > h1 {
+h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.7em;
 	color: #053380; 
 	text-align: center;  
 }
 @media (min-width:36em) {
-	main > h1 {
+	h1 {
 		font-size: 2.2em; 
 	}
 }
@@ -139,33 +140,59 @@ form > fieldset > label > input {
 		margin-left: 2em; 
 	}
 }
-
-/*wachtwoord vergeten button*/
-main > section > form > fieldset > button {
-	background-color: transparent; 
-	border-bottom: 0.1em solid #053380; 
-	font-size: 0.93em;
-	color: #053380;
-	margin: 1em; 
-	padding: 0; 
-	border-radius: none;
-	/*grijze balk om 'wachtwoord vergeten' moet nog weg*/
+form > fieldset > label > input:focus {
+	border: solid 0.3em #137BD0;
+}
+form > fieldset > label > input:valid {
+	border: solid 0.3em green;
 }
 
+
+/*wachtwoord vergeten button*/
+form > fieldset > button {
+	border-style: none; 
+	background-color: transparent; 
+	border-bottom: 0.15em solid rgba(7,7,33,0.1) ; /*rgba vanwege opacity*/
+	font-size: 0.93em;
+		font-family: 'Open Sans', sans-serif; 
+	color: #053380;
+	margin: 1em; 
+	padding: 0 0 1em 0; 
+	border-radius: none;
+}
+form > fieldset > button:hover {
+	border-bottom: 0.15em solid #137bd0; 
+}
+form > fieldset > button:focus {
+	border-bottom: 0.15em solid #137bd0; 
+}
+form > fieldset > button:active {
+	border-bottom: 0.15em solid #053380; 
+}
 /*login button*/
-main > section > form > fieldset > button:nth-of-type(2) {
+form > fieldset > a {
+	width: 3em;
 	margin: 1em;
 	padding: 0.61em 1.1em;
-	border: none; 
+	border: none;
+	text-decoration: none; 
 	background-color: #137bd0;
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
 	color: white;
 	border-radius: 0.3em; 
-	box-shadow: inset 0 -0.15em #094e9e; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.15em #094e9e; /* bron inner shadow https://www.cssmatic.com/box-shadow */
+	transition: box-shadow .15s ease-in-out;
 }
-
-
+form > fieldset > a:hover {
+	background-color: #0a59b2; 
+}
+form > fieldset > a:focus {
+	background-color: #0a59b2; 
+}
+form > fieldset > a:active {
+	background-color: #094e9e
+}
 /*
 ============================
 ACCOUNT MAKEN
@@ -195,9 +222,8 @@ section > ul {
 		padding: 0 2em;
 	}
 }
-
 section > ul > li {
-	background-image: url(img/vinkje4-01-01.svg); /*https://stackoverflow.com/questions/7775594/css-list-style-image-size ik heb het geprobeerd met list-style-image, maar die werd te klein */
+	background-image: url(img/vinkje4-01-01.svg);/*https://stackoverflow.com/questions/7775594/css-list-style-image-size ik heb het geprobeerd met list-style-image, maar die werd te klein */
 	background-position: left; 
 	background-repeat: no-repeat;
 	height: 1em; 
@@ -209,13 +235,28 @@ section > ul > li {
 	}
 }
 
-main > section > section > a {
+.accountAanmaken a {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 0.93em;
-	padding: 1em; 
+	font-size: 0.93em; 
+	text-decoration: none;
+	background-color: transparent; 
+	border-bottom: 0.15em solid rgba(7,7,33,0.1) ; /*rgba vanwege opacity*/
+	color: #053380; 
+	margin: 1em; 
+	padding: 0 0 1em 0; 
+	border-radius: none;
+}
+.accountAanmaken a:hover {
+	border-bottom: 0.15em solid #137Bd0
+}
+.accountAanmaken a:focus {
+	border-bottom: 0.15em solid #137Bd0
+}
+.accountAanmaken a:active {
+	border-bottom: 0.15em solid #053380; 
 }
 @media (min-width:64em) {
-	main > section > section > a {
+	section > section > a {
 		padding: 2em
 	}
 }
