@@ -15,19 +15,21 @@
 				<li><a href="index.html"><img src="img/Nederlandse_Spoorwegen_logo.svg" alt="logo"></a></li>
 				<li><a href="index.html">NS verhalen</a></li>
 				<li><a href="index.html"><img src="img/zoeken.svg" alt="zoeken"><div>Zoeken</div></a></li>
-				<li><a href="index.html"><img src="img/poppetje.svg" alt="mijn-account"><div>Mijn account</div></a></li>	
+				<li><a href="mijnaccount.html"><img src="img/poppetje.svg" alt="mijn-account"><div>Mijn account</div></a></li>	
 			</ul>
 		</nav>
+		<div></div>
 	</header>
 	
 	<main>
-		<form>
-			<fieldset>
+			<form>
+				<fieldset>
 				<legend>Zoekopties</legend>
-				<div>
-					<fieldset class="filterCategorie">
-						<legend>Categorie</legend>
-							<label><input id="avontuurlijk" type="checkbox"> Avontuurlijk</label>
+				<div class="filters">
+					<fieldset>
+				  <legend>Categorie</legend>
+						<div class="filterCategorie">
+							<label><input id="avontuurlijk" type="checkbox">Avontuurlijk</label>
 							<label><input id="correspondentie" type="checkbox">Correspondentie</label>
 							<label><input id="familie" type="checkbox">Familie</label>
 							<label><input id="fantasie" type="checkbox">Fantasie</label>
@@ -40,47 +42,20 @@
 							<label><input id="politiek" type="checkbox">Politiek</label>
 							<label><input id="romantiek" type="checkbox">Romantiek</label>
 							<label><input id="sport" type="checkbox">Sport</label>
+							</div>
 					</fieldset>
-					<fieldset class="filterLengte">
+					<fieldset>
 						<legend>Lengte</legend>
+							<div class="filterLengte">
 							<label><input id="kort" type="checkbox">Kort</label>
 							<label><input id="middel" type="checkbox">Middel</label>
 							<label><input id="lang" type="checkbox">Lang</label>
+							</div>
 					</fieldset>
 					</div>
+					<button class="buttonVerhalen">Toon verhalen</button>
 			</fieldset>
 		</form>
-	
-	
-	
-	<!--	<section>
-			<h2 class="filterButton">Zoekopties</h2>
-			<section class="alleFilters">
-				<section class="filterCategorie">
-					<h3>Categorie</h3>
-						<label>Avontuurlijk<input type="checkbox"></label>
-						<label>Correspondentie<input type="checkbox"></label>
-						<label>Familie<input type="checkbox"></label>
-						<label>Fantasie<input type="checkbox"></label>
-						<label>Gezondheid<input type="checkbox"></label>
-						<label>Komedie<input type="checkbox"></label>
-						<label>Kunst<input type="checkbox"></label>
-						<label>Maatschappelijk<input type="checkbox"></label>
-						<label>Nurks<input type="checkbox"></label>
-						<label>Personen<input type="checkbox"></label>
-						<label>Politiek<input type="checkbox"></label>
-						<label>Romantiek<input type="checkbox"></label>
-						<label>Sport<input type="checkbox"></label>
-				</section>
-				<section class="filterLengte">
-					<h3>Lengte</h3>
-						<label>Kort<input type="checkbox"></label>
-						<label>Middel<input type="checkbox"></label>
-						<label>Lang<input type="checkbox"></label>	
-			</section>
-			<button>filter</button>
-		</section>
-		</section> -->
 				
 		<section>
 			<article>

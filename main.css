@@ -4,11 +4,6 @@ body {
 	background-color: #E6E6E9;
 }
 
-/*@media (min-width: 75em) {
-	main {
-		margin: 2.5em; 
-	}
-}*/
 /*
 ============================
 Header
@@ -16,7 +11,7 @@ Header
 */
 
 /*GEHELE HEADER*/ 
-header {
+header > div {
 	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
 	background-repeat: no-repeat; 
 	background-position: center;
@@ -52,6 +47,7 @@ header > nav > ul > li > a {
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
 	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
 	text-decoration: none;
 	color: rgb(5, 51, 128); 
 }
@@ -89,97 +85,110 @@ filter
 ============================
 */
 
-
-main > form {
-	background-color: #137BD0;; 
-	margin: 0 1.5em; 
+main > form { 
+	background-color: #FFC916; 
+	margin: 0 0.44em; 
 	position: relative; 
 	top: -1.4em;
-	box-shadow: inset 0 -0.15em #094E9E;
+	box-shadow: inset 0 -0.15em #E0B200;
 	border-radius: 0.3em;
 }
+@media (min-width: 36em)  {
+	main > form {
+		margin: 0 0.875em;
+		height: 20em; 
+		box-shadow: none; 
+	}
+}
 
-
-main > form > fieldset:first-of-type {
+main > form > fieldset:first-of-type { 
 	border-style: none;
 	padding: 0; 
 }
 
-.filterCategorie {
+.filters { 
 	display: none;
-	border-style: none; 
+} 
+@media (min-width: 36em) {
+	.filters {
+	display: grid; 
+	grid-template-columns: 2fr 1fr; 
+	}
+}
+@media (min-width: 64em) {
+	.filters {
+	display: grid; 
+	grid-template-columns: 3fr 1fr; 
+	}
 }
 
-.filterLengte {
+.buttonVerhalen { 
 	display: none; 
-	border-style: none; 
 }
 
-main > form > fieldset > legend:first-of-type {
+main > form > fieldset > legend:first-of-type { 
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
 	text-align: center; 
-	color: white;
+	color: #053380;
 	padding-bottom: 0.3em; 
 	padding: 0.93em 0; 
+} 
+
+
+
+.filters > fieldset {
+	border-style: none;
 }
 
-legend {
+.filters > fieldset > legend {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
+	font-weight: bold;
+	color: #053380;
 }
 
-.toonFilterCat {
-	display: block; 
-}
-
-.toonFilterLeng {
-	display: block; 
-}
-
-label {
+.filters label {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
-	padding-right: 1.5em;
+	color: black; 
 }
 
-form > fieldset > div {
+.filterCategorie label {
 	display: flex; 
-	flex-direction: column; 
-	flex-wrap: wrap; 
 }
-
-form > fieldset > div > label {
-	flex: 1 100%; 
-}
-
-/*
-
-.filterCategorie > label > input {
-	border-style: none; 
-}
-
-
 @media (min-width: 36em) {
-	main > form > fieldset > legend:first-of-type {
-		font-size: 1.2em; 
-		text-align: left;
-	}
 	.filterCategorie {
-		display: block; 
-		grid-column-start: 1;
-		grid-column-end: 4; 
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
 	}
-	.filterLengte {
-		display: block; 
-	}
-	main > form > fieldset > div {
-		display: grid; 
-		grid-template-columns: 1fr 1fr 1fr 1fr; 
 }
-	main > form > fieldset > div > fieldset > label {
-		padding-right: 1em; 
-	}*/
+@media (min-width: 64em) {
+	.filterCategorie {
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	}
+}
+
+.filterLengte label {
+	display: flex; 
+}
+
+
+
+
+
+
+/*JAVASCRIPT*/
+
+.toonFilterOpties {
+	display: grid; 
+	grid-template-columns: 1fr; 
+} 
+
+
+
+
 /*
 ============================
 article 
@@ -192,7 +201,8 @@ section:first-of-type {
 	grid-template-columns: 1fr; 
 	margin: 0.44em; 
 	grid-gap: 0.875em; 
-}
+} 
+
 @media (min-width: 36em) {
 	section:first-of-type {
 		display: grid;
@@ -219,8 +229,6 @@ section > article {
 	background-color: white; 
 	box-shadow: inset 0 -0.15em #C5C5CB; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 }
-
-
 
 /*afbeelding verhaal*/
 main > section > article > div > img {	
@@ -285,14 +293,23 @@ section > article > div > footer > a:first-of-type {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
 	padding: 0.61em 1.1em;
-	background-color: #EF9830; 
+	background-color: #0063D3; 
 	text-decoration: none;
 	border-radius: 0.3em; 
 	color: white; 
-	box-shadow: inset 0 -0.15em #DD8D2F; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	box-shadow: inset 0 -0.15em #004BA0; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
 	margin-right: auto; 
 }
-
+section > article > div > footer > a:first-of-type:hover {
+	background-color: #0a59b2; 
+	}
+section > article > div > footer > a:first-of-type:focus {
+	background-color: #0a59b2;  
+	}
+section > article > div > footer > a:first-of-type:active {
+	background-color: #094e9e;
+	}
+	
 /*comment en plus*/
 section > article > div > footer > a > img {
 	width: 2.4em; 

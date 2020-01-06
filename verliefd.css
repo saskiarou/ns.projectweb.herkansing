@@ -10,20 +10,32 @@ Header
 ============================
 */
 
-/*header balk*/
+/*GEHELE HEADER*/ 
+header {
+	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover;
+	height: 30em;
+	width: 100%;
+	box-shadow: 0.4em 0.06em 0.4em grey; 
+}
+
+/*NAV BALK*/
 header > nav {
 	background-color: #ffffff; 
 	margin: 0; 
-	height: 4em; 
+	height: 3.75em; 
 	width: 100%; 
 	position: fixed; 
+	top: 0;
 }
 
-/*in de balk*/
+/*ELEMENTEN IN DE BALK*/
 header > nav > ul {
 	display: flex;
 	align-items: center; /* li items in het midden */
-	padding: 0em 1.5em; 
+	padding: 0 1.31em; 
 }
 
 header > nav > ul > li {
@@ -34,7 +46,7 @@ header > nav > ul > li > a {
 	text-decoration: none; /* geen link onder text */
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
-	font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif; 
+	font-family: 'Open Sans', sans-serif; 
 	text-decoration: none;
 	color: rgb(5, 51, 128); 
 }
@@ -53,9 +65,8 @@ header > nav > ul > li > a > img {
 }
 
 header li:nth-of-type(1) img {
-	width: 4em; 
+	width: 3.2em; 
 }
-
 /*tekst header laten verdwijnen*/
 header > nav > ul > li > a > div {
 	display: none;

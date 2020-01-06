@@ -10,38 +10,39 @@
 <body>
 	
 	<main>
-		<h1>NS Verhalen</h1>
-			<section class="alleFilters">
-				<section>
-					<button class="filterCategorie">Filter Categorie</button>
-						<div class="labels">
-						<section class="labelsCategorie">
-						<label>Avontuurlijk<input type="checkbox"></label>
-						<label>Correspondentie<input type="checkbox"></label>
-						<label>Familie<input type="checkbox"></label>
-						<label>Fantasie<input type="checkbox"></label>
-						<label>Gezondheid<input type="checkbox"></label>
-						<label>Komedie<input type="checkbox"></label>
-						<label>Kunst<input type="checkbox"></label>
-						<label>Maatschappelijk<input type="checkbox"></label>
-						<label>Nurks<input type="checkbox"></label>
-						<label>Personen<input type="checkbox"></label>
-						<label>Politiek<input type="checkbox"></label>
-						<label>Romantiek<input type="checkbox"></label>
-						<label>Sport<input type="checkbox"></label>
-						</section>
-						</div>
-			</section>
-				
-			<section>
-				<button>Filter verhaallengte</button>
-					<label>Kort<input type="checkbox"></label>
-					<label>Middel<input type="checkbox"></label>
-					<label>Lang<input type="checkbox"></label>	
-			</section>
-			</section>
-		
-		
+		<form>
+			<fieldset>
+				<legend>Zoekopties</legend>
+				<div class="filters">
+					<fieldset>
+						<div class="filterCategorie"><legend>Categorie</legend>
+							<label><input id="avontuurlijk" type="checkbox">Avontuurlijk</label>
+							<label><input id="correspondentie" type="checkbox">Correspondentie</label>
+							<label><input id="familie" type="checkbox">Familie</label>
+							<label><input id="fantasie" type="checkbox">Fantasie</label>
+							<label><input id="gezondheid" type="checkbox">Gezondheid</label>
+							<label><input id="komedie" type="checkbox">Komedie</label>
+							<label><input id="kunst" type="checkbox">Kunst</label>
+							<label><input id="maatschappelijk" type="checkbox">Maatschappelijk</label>
+							<label><input id="nurks" type="checkbox">Nurks</label>
+							<label><input id="personen" type="checkbox">Personen</label>
+							<label><input id="politiek" type="checkbox">Politiek</label>
+							<label><input id="romantiek" type="checkbox">Romantiek</label>
+							<label><input id="sport" type="checkbox">Sport</label>
+							</div>
+					</fieldset>
+					<fieldset class="filterLengte">
+						<legend>Lengte</legend>
+							<label><input id="kort" type="checkbox">Kort</label>
+							<label><input id="middel" type="checkbox">Middel</label>
+							<label><input id="lang" type="checkbox">Lang</label>
+					</fieldset>
+					</div>
+					<button class="buttonVerhalen">Toon verhalen</button>
+			</fieldset>
+		</form>
+	
+
 	
 	</main>
 	

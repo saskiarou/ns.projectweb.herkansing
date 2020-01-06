@@ -36,6 +36,7 @@ header > nav > ul > li > a {
 	display: flex; 	/* text in een rij met afbeelding */ 
 	align-items: center; /* in het midden zetten */ 
 	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
 	text-decoration: none;
 	color: rgb(5, 51, 128); 
 }
@@ -191,7 +192,7 @@ form > fieldset > a:focus {
 	background-color: #0a59b2; 
 }
 form > fieldset > a:active {
-	background-color: #094e9e
+	background-color: #094e9e;
 }
 /*
 ============================
