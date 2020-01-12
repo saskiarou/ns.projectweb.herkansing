@@ -44,15 +44,18 @@ header > nav > ul > li > a {
 
 header > nav > ul > li > a:hover {
 	color: #0063D3;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li > a:focus {
 	color: #0063D3;
 	padding-right: 0.2em; 
+	transition: .3s ease-in; 
 }
 
 header > nav > ul > li > a:active {
 	color: #094e9e;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li:first-of-type a:focus {
@@ -116,7 +119,8 @@ h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.7em;
 	color: #053380; 
-	text-align: center;  
+	text-align: center; 
+	font-weight: 600;
 }
 @media (min-width:36em) {
 	h1 {
@@ -156,9 +160,10 @@ form > fieldset > label {
 }
 
 form > fieldset > label > input {
+	box-sizing: border-box;
 	display: grid; 
-	height: 2.8em; 
-	width: calc(100% - 1.8em); /* wil niet de gehele 100% pakken, dus daarom dit https://stackoverflow.com/questions/17631611/100-width-minus-margin-and-padding*/ 
+	height: 4em; 
+	width: 100%; 
 	margin: 0.3em 0; 
 	padding: 0.6em 0.9em 0.6em 0.9em;
 	border-style: none; 
@@ -175,10 +180,17 @@ form > fieldset > label > input {
 }
 form > fieldset > label > input:focus {
 	border: solid 0.3em #137BD0;
+	transition: 0.6s ease-out; 
 }
 form > fieldset > label > input:valid {
 	border: solid 0.3em green;
+	transition: 0.6s ease-out; 
 }
+/* Niet gebruikt omdat hij standaard rood wordt
+form > fieldset > label > input:invalid {
+	border: solid 0.2em #FF8B8B;
+}*/
+
 
 
 /*wachtwoord vergeten button*/
@@ -187,7 +199,7 @@ form > fieldset > button {
 	background-color: transparent; 
 	border-bottom: 0.15em solid rgba(7,7,33,0.1) ; /*rgba vanwege opacity*/
 	font-size: 0.93em;
-		font-family: 'Open Sans', sans-serif; 
+	font-family: 'Open Sans', sans-serif; 
 	color: #053380;
 	margin: 1em; 
 	padding: 0 0 1em 0; 
@@ -195,16 +207,19 @@ form > fieldset > button {
 }
 form > fieldset > button:hover {
 	border-bottom: 0.15em solid #137bd0; 
+	transition: 0.6s ease-out; 
 }
 form > fieldset > button:focus {
 	border-bottom: 0.15em solid #137bd0; 
+	transition: 0.6s ease-out; 
 }
 form > fieldset > button:active {
 	border-bottom: 0.15em solid #053380; 
+	transition: 0.6s ease-out; 
+	
 }
 /*login button*/
-form > fieldset > a {
-	width: 3em;
+form > fieldset > button:first-of-type {
 	margin: 1em;
 	padding: 0.61em 1.1em;
 	border: none;
@@ -215,16 +230,39 @@ form > fieldset > a {
 	color: white;
 	border-radius: 0.3em; 
 	box-shadow: inset 0 -0.15em #094e9e; /* bron inner shadow https://www.cssmatic.com/box-shadow */
-	transition: box-shadow .15s ease-in-out;
+	/*transition: box-shadow .15s ease-in-out;*/
+	/*transition: background-color 0.5s ease-in;*/
+	/*transform: translateZ(0);
+	transition: background-color 1000ms; */
 }
-form > fieldset > a:hover {
+
+/*https://codepen.io/vulchivijay/pen/KwBGjX*/
+
+/*form > fieldset > button:first-of-type:before {
+	z-index: -1; 
+	transform: scaleY(0);
+	transition: 300ms ease-out;
+}
+form > fieldset > button:first-of-type:hover:before {
+	  transform: scaleY(1);
+}*/
+	
+	
+	
+	
+	
+form > fieldset > button:first-of-type:hover {
+	background-color: #0a59b2;
+	transition: 0.6s ease-out; 
+	/*transition: .5s ease-in; */
+}
+form > fieldset > button:first-of-type:focus {
 	background-color: #0a59b2; 
+	transition: 0.6s ease-out; 
 }
-form > fieldset > a:focus {
-	background-color: #0a59b2; 
-}
-form > fieldset > a:active {
+form > fieldset > button:first-of-type:active {
 	background-color: #094e9e;
+	transition: 0.6s ease-out; 
 }
 /*
 ============================
@@ -232,14 +270,22 @@ ACCOUNT MAKEN
 ============================
 */
 
+.accountAanmaken {
+	padding-left: 1em; 
+}
+@media (min-width: 64em) {
+	.accountAanmaken {
+		padding-left: 1.5em; 
+	}
+}
+
 h2 {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 1.2em; 
-	padding: 0 1em;
+	font-weight: 500;
 }
 @media (min-width:64em) {
 	h2 {
-		padding: 0 1.5em; 
 		font-size: 1.4em;
 	}
 }
@@ -248,13 +294,9 @@ section > ul {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
 	list-style-type: none;  
-	padding: 0 1em;
+	padding: 0;
 }
-@media (min-width:64em) {
-	section > ul {
-		padding: 0 2em;
-	}
-}
+
 section > ul > li {
 	background-image: url(img/vinkje4-01-01.svg);/*https://stackoverflow.com/questions/7775594/css-list-style-image-size ik heb het geprobeerd met list-style-image, maar die werd te klein */
 	background-position: left; 
@@ -264,7 +306,7 @@ section > ul > li {
 }
 @media (min-width:64em) {
 	section > ul > li {
-		margin: 1.5em; 
+		margin: 1.5em 0; 
 	}
 }
 
@@ -275,18 +317,20 @@ section > ul > li {
 	background-color: transparent; 
 	border-bottom: 0.15em solid rgba(7,7,33,0.1) ; /*rgba vanwege opacity*/
 	color: #053380; 
-	margin: 1em; 
 	padding: 0 0 1em 0; 
 	border-radius: none;
 }
 .accountAanmaken a:hover {
-	border-bottom: 0.15em solid #137Bd0
+	border-bottom: 0.15em solid #137Bd0;
+	transition: 0.6s ease-out; 
 }
 .accountAanmaken a:focus {
-	border-bottom: 0.15em solid #137Bd0
+	border-bottom: 0.15em solid #137Bd0;
+	transition: 0.6s ease-out; 
 }
 .accountAanmaken a:active {
-	border-bottom: 0.15em solid #053380; 
+	border-bottom: 0.15em solid #053380;
+	transition: 0.6s ease-out; 
 }
 @media (min-width:64em) {
 	section > section > a {
