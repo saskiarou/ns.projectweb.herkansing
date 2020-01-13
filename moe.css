@@ -4,98 +4,194 @@ body {
 	background-color: #E6E6E9;
 }
 
+h1 {
+	font-family: sans-serif; 
+}
+
+p{
+	font-family: sans-serif; 
+	font-size: 3em; 
+}
+p:nth-of-type(2) {
+	font-family: 'Frijole', cursive;
+}
+
+p:first-of-type {
+	color: transparent;
+	text-shadow: -0.25em 0.25em rgba(179,179,179,.4),
+		         -0.19em 0.19em rgba(153,153,153,.2), 
+		         -0.12em 0.12em rgba(179,179,179,.2), 
+		         -0.06em 0.06em rgba(179,179,179,.2), 
+		         0em 0em rgba(128,128,128,.5), 
+		         0.06em -0.06em rgba(77,77,77,.6), 
+		         0.12em -0.12em rgba(77,77,77,.7), 
+		         0.19em -0.19em rgba(82,82,82,.8), 
+		         0.25em -0.25em rgba(77,77,77,.9), 
+		         0.31em -0.31em rgba(77,77,77,1);
+}
+
+.we {
+	text-shadow: 0 0 0.2em #6E6E6E;
+	color: transparent;
+	transition: 2s ease-in-out; 
+	text-shadow: -0.25em 0.25em rgba(82,82,82,.8),
+		         -0.19em 0.19em rgba(82,82,82,.8), 
+		         -0.12em 0.12em rgba(82,82,82,.8), 
+		         -0.06em 0.06em rgba(82,82,82,.8), 
+		         0em 0em rgba(82,82,82,.8), 
+		         0.06em -0.06em rgba(82,82,82,.8), 
+		         0.12em -0.12em rgba(82,82,82,.8), 
+		         0.19em -0.19em rgba(82,82,82,.8), 
+		         0.25em -0.25em rgba(82,82,82,.8), 
+		         0.31em -0.31em rgba(82,82,82,.8);
+}
+.we:hover {
+	color: black; 
+	text-shadow: none; 
+	transition: 2s ease-in-out; 
+}
+
+.zijn {
+	text-shadow: 0 0 0.2em #484848 ;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.zijn:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
+}
+
+.bij {
+	text-shadow: 0 0 0.2em #353535;
+	color: transparent; 
+	transition: 2s ease-in-out; 
+}
+.bij:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
+}
+
+.de {
+	text-shadow: 0 0 0.15em #222222;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.de:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
+}
+
+.eindhalte {
+	text-shadow: 0 0 0.1em black;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.eindhalte:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
+}
+
+.Centraal {
+	text-shadow: 0 0 0.15em #222222;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.Centraal:hover {
+	transition: 2s ease-in-out;
+	color: black; 
+	text-shadow: none; 
+}
+
+.Station {
+	text-shadow: 0 0 0.2em #353535;
+	color: transparent; 
+	transition: 2s ease-in-out; 
+}
+.Station:hover {
+	transition: 2s ease-in-out; 
+}
+
+
+
 /*
-============================
-Header
-============================
-*/
-
-/*NAV BALK*/
-header > nav {
-	background-color: #ffffff; 
-	margin: 0; 
-	height: 3.75em; 
-	width: 100%; 
-	position: fixed; 
-	top: 0;
+.we {
+	text-shadow: 0 0 0.2em #6E6E6E;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.we:hover {
+	color: black; 
+	text-shadow: none; 
+	transition: 2s ease-in-out; 
 }
 
-/*ELEMENTEN IN DE NAVIGATIEBLAK*/
-header > nav > ul {
-	display: flex;
-	align-items: center; /* li items in het midden */
-	padding: 0;
+.zijn {
+	text-shadow: 0 0 0.2em #484848 ;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.zijn:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
 }
 
-header > nav > ul > li {
-	list-style-type: none; /* geen bolletje voor li items */
+.bij {
+	text-shadow: 0 0 0.2em #353535;
+	color: transparent; 
+	transition: 2s ease-in-out; 
+}
+.bij:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
 }
 
-/*ELEMENTEN LOS*/
-header > nav > ul > li > a {
-	text-decoration: none; /* geen link onder text */
-	display: flex; 	/* text in een rij met afbeelding */ 
-	align-items: center; /* in het midden zetten */ 
-	font-family: 'Open Sans', sans-serif; 
-	font-size: 0.93em; 
-	text-decoration: none;
-	color: #053380;  
+.de {
+	text-shadow: 0 0 0.15em #222222;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.de:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
 }
 
-header > nav > ul > li > a:hover {
-	color: #0063D3;
+.eindhalte {
+	text-shadow: 0 0 0.1em black;
+	color: transparent;
+	transition: 2s ease-in-out; 
+}
+.eindhalte:hover {
+	transition: 2s ease-in-out; 
+	color: black; 
+	text-shadow: none; 
 }
 
-header > nav > ul > li > a:focus {
-	color: #0063D3;
-	padding-right: 0.2em; 
+.Centraal {
+	text-shadow: 0 0 0.15em #222222;
+	color: transparent;
+	transition: 2s ease-in-out; 
 }
-
-header > nav > ul > li > a:active {
-	color: #094e9e;
-}
-
-header > nav > ul > li:first-of-type a:focus {
-	padding-left: 0.1em; 
-}
+.Centraal:hover {
+	transition: 2s ease-in-out;
+	color: black; 
+	text-shadow: none; 
 	
-header > nav > ul > li:first-of-type {
-	padding-left: 1.3em;
-	margin-right: auto; /* opschuiven naar de andere kant */
 }
 
-header > nav > ul > li:first-of-type:hover {
-	padding-left: 1.2em; 
+.Station {
+	text-shadow: 0 0 0.2em #353535;
+	color: transparent; 
+	transition: 2s ease-in-out; 
 }
-
-header > nav > ul > li:nth-of-type(2):hover{
-	margin-right: 0.1em; 
+.Station:hover {
+	transition: 2s ease-in-out; 
+	
 }
-
-header > nav > ul > li:nth-of-type(3) {
-	margin-left: 0.5em; 
-	padding-right: 1.3em;
-}
-header > nav > ul > li:nth-of-type(3):hover {
-	padding-right: 1.4em; 
-	margin-left: 0.4em;
-}
-
-header > nav > ul > li > a > img {
-	width: 2em;
-}
-
-header li:first-of-type img {
-	width: 3.2em; 
-	padding-right: 0.5em; 
-}
-
-/*TEXT HEADER RESPONSIVE*/
-header > nav > ul > li > a > div {
-	display: none;
-}
-@media (min-width: 36em)  {
-	header > nav > ul > li > a > div {
-		display: block; 
-	}
-}
+*/

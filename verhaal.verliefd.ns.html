@@ -5,27 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Verhaal Verliefd</title>
 	<link rel="stylesheet" href="verliefd.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html"><img src="img/Nederlandse_Spoorwegen_logo.svg" alt="logo"></a></li>
-				<li><a href="index.html">NS verhalen</a></li>
-				<li><a href="index.html"><img src="img/zoeken.svg" alt="zoeken"><div>Zoeken</div></a></li>
-				<li><a href="index.html"><img src="img/poppetje.svg" alt="mijn-account"><div>Mijn account</div></a></li>	
-			</ul>
-		</nav>
-	</header>
 	
 	<main>
-		<img src="img/verhaal.verliefd.mobiel.jpg" alt="verhaal verliefd">
+		<form>
+			<fieldset>
+			<legend>Zoekopties</legend>
+				<div class="filters">
+					<fieldset>
+				 		<legend>Categorie</legend>
+							<div class="filterCategorie">
+								<div class="CustomCheckbox">
+									<input id="avontuurlijk" type="checkbox">
+									<label for="avontuurlijk">Avontuurlijk</label>
+								</div>
+								<div class="CustomCheckbox">
+									<input id="correspondentie" type="checkbox">
+									<label for="correspondentie">Correspondentie</label>
+								</div>
+								<div class="CustomCheckbox">
+									<input id="familie" type="checkbox">
+									<label for="familie">Familie</label>
+								</div>
+							</div>
+					</fieldset>
+					<fieldset>
+						<legend>Lengte</legend>
+							<div class="filterLengte">
+								<label><input id="kort" type="checkbox"><span class="checkboxCustom"></span>Kort</label>
+								<label><input id="middel" type="checkbox"><span class="checkboxCustom"></span>Middel</label>
+								<label><input id="lang" type="checkbox"><span class="checkboxCustom"></span>Lang</label>
+								</div>
+					</fieldset>
+					<button class="buttonVerhalen">Toon verhalen</button>
+				</div>
+			</fieldset>
+		</form>
 	</main>
+	<!--bron: /*https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3*/ -->
 	
-	
-
 	
 </body>
 </html>

@@ -28,6 +28,7 @@ header > nav {
 	width: 100%; 
 	position: fixed; 
 	top: 0;
+	z-index: 1; /*Deze laag staat bovenaan, zodat de 'relative' elementen er niet overheen gaan. Bron: https://www.sitepoint.com/atoz-css-z-index/*/
 }
 
 /*ELEMENTEN IN DE NAVIGATIEBLAK*/
@@ -48,21 +49,23 @@ header > nav > ul > li > a {
 	align-items: center; /* in het midden zetten */ 
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 0.93em; 
-	text-decoration: none;
 	color: #053380;  
 }
 
 header > nav > ul > li > a:hover {
 	color: #0063D3;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li > a:focus {
 	color: #0063D3;
 	padding-right: 0.2em; 
+	transition: .3s ease-in; 
 }
 
 header > nav > ul > li > a:active {
 	color: #094e9e;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li:first-of-type a:focus {
@@ -184,6 +187,10 @@ main > form > fieldset > legend:first-of-type {
 	color: #053380;
 	padding: 0.93em 0; 
 } 
+main > form > fieldset > legend:first-of-type:hover {
+	color:#0063D3;
+	cursor: pointer;
+}
 @media (min-width: 36em) {
 	main > form > fieldset > legend:first-of-type {
 		text-align: left; 
@@ -238,6 +245,7 @@ main > form > fieldset > legend:first-of-type {
 	display: flex; 
 }
 
+/*button filter zoeken*/
 .buttonVerhalen {
 	background-color: #0063D3;
 	color: white;
@@ -248,6 +256,7 @@ main > form > fieldset > legend:first-of-type {
 	padding: 0.61em 1.1em;
 	margin: 1.5em 0;
 	box-shadow: inset 0 -0.15em #004BA0; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	display: block; 
 }
 @media (min-width: 36em) {
 	.buttonVerhalen {
@@ -258,15 +267,36 @@ main > form > fieldset > legend:first-of-type {
 }
 .buttonVerhalen:hover {
 	background-color: #0a59b2; 
+	transition: 0.6s ease-out; 
+	position: relative; 
+	transform: translateZ(0);
 	}
+.buttonVerhalen:before {
+	content: "";
+    position: absolute; /*zodat het uit beeld komt*/
+    z-index: -1; /*zorgt ervoor dat hij erachter ligt*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0); /*hier is de y kleiner*/
+	transform-origin: bottom;/*gaat tot 100% in de verticale positie https://tympanus.net/codrops/css_reference/transform-origin/*/
+	border-radius: 0.3em;
+	background-color: #0a59b2;
+	transition-property: transform;
+}
+.buttonVerhalen:hover:before {
+	 transform: scaleY(1); /*zorgt ervoor dat de Y groter wordt https://www.w3schools.com/cssref/css3_pr_transform.asp*/
+	 transition: .2s ease-in-out;
+}
 .buttonVerhalen:focus {
 	background-color: #0a59b2;  
+	transition: 0.6s ease-out; 
 	}
 .buttonVerhalen:active {
 	background-color: #094e9e;
+	transition: 0.6s ease-out; 
 	}
-
-
 
 .filters { 
 position: relative;
@@ -277,6 +307,7 @@ position: relative;
 }
 
 /*bron: https://medium.com/mobile-app-developers/styling-checkbox-css-tips-e103c54ea1c7 */
+/*checkbox custom*/
 .checkboxCustom {
 	position: absolute; 
 	height: 1.25em; 
@@ -284,13 +315,14 @@ position: relative;
 	background-color: white; 
 	border-radius: 0.1em;
 	cursor: pointer;
+	content: "";
 }
+
 .checkboxCustom:hover {
-	background-color: black; 
+	border: 0.1em solid #0063D3;
 }
 .checkboxCustom:focus {
-	background-color: black; 
-	opacity: 1; 
+	border: 0.1em solid #0063D3;
 }
 /*bron: https://medium.com/mobile-app-developers/styling-checkbox-css-tips-e103c54ea1c7 */
 .filters input:checked ~ .checkboxCustom {
@@ -300,11 +332,7 @@ position: relative;
 }
 
 
-
-
-
 /*JAVASCRIPT*/
-
 .toonFilterOpties {
 	display: grid; 
 	grid-template-columns: 1fr; 
@@ -315,12 +343,34 @@ position: relative;
 	}
 }
 
-
 /*
 ============================
 article 
 ============================
 */
+
+h1 { 
+	margin: 0;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 1.4em;
+	font-weight: 500;
+	display: grid; 
+	grid-column-start: 1; 
+	grid-column-end: 2; 
+}
+@media (min-width: 36em) {
+	h1 {
+		grid-column-end: 3; 
+		margin-bottom: -0.8em;
+	}
+}
+@media(min-width: 64em) {
+	h1 {
+		grid-column-end: 4; 
+		margin-bottom: -0.8em;
+	}
+}
+
 
 /*GRID ALLE ARTIKELEN*/
 section:first-of-type {
@@ -359,13 +409,13 @@ section > article {
 }
 
 /*afbeelding verhaal*/
-main > section > article > div > img {	
+main > section > article > div > a > img {	
 	width: 100%;
  	height: 12em;  
 	object-fit: cover; /*afbeelding schaalt mee, bron: inspector ns.nl*/
 	}
 
-h3 {
+h2 {
 	font-family: 'Open Sans', sans-serif; 
 	font-size: 1.2em;
 	font-weight: 400;
@@ -373,7 +423,7 @@ h3 {
 	margin-bottom: 0em; 
 }
 @media (min-width: 36em) {
-	h3 {
+	h2 {
 		font-size: 1.4em;
 	}
 }
@@ -401,13 +451,13 @@ section > article > div > footer:first-of-type {
 section > article > div > p { 
 	font-family: 'Open Sans', sans-serif;  
 	font-size: 0.93em;
-	max-height: 6em;  
+	max-height: 7em;  
 	margin: 0; 
 	padding: 1.25em 0; 
 }
 @media (min-width: 36em) {
 	section > article > div > p {
-	max-height: 9em; 
+	max-height: 11em; 
 	}
 }
 @media (min-width: 64em) {
@@ -430,12 +480,15 @@ section > article > div > footer > a:first-of-type {
 }
 section > article > div > footer > a:first-of-type:hover {
 	background-color: #0a59b2; 
+	transition: 0.4s ease-out; 
 	}
 section > article > div > footer > a:first-of-type:focus {
 	background-color: #0a59b2;  
+	transition: 0.4s ease-out; 
 	}
 section > article > div > footer > a:first-of-type:active {
 	background-color: #094e9e;
+	transition: 0.4s ease-out; 
 	}
 	
 /*comment en plus*/
@@ -453,26 +506,25 @@ main > section > article > div:nth-of-type(2) {
 	padding: 0 1.5em 1.5em 1.5em; 
 }
 
-/*section > article > div > footer > a:nth-of-type(2):hover {
-	background-color: black;
-}*/
+/*bron: https://css-tricks.com/change-color-of-svg-on-hover/*/
 
-
-
-
+/*SVG*/
 svg {
 	width: 2.5em; 
 }
 
 svg:hover path {
 	fill: #0063D3; 
+	transition: 0.6s ease-out; 
 }
 
 a:focus svg path {
 	fill: #0a59b2;
+	transition: .3s ease-out; 
 }
 
 a:active svg path {
 	fill: #094e9e;
+	transition: .6s ease-out; 
 }
 

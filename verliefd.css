@@ -6,96 +6,288 @@ body {
 
 /*
 ============================
-Header
+filter
 ============================
 */
 
-/*GEHELE HEADER*/ 
-header {
-	background-image: url(img/afdelingbeeld.nl-maaike-poelen-ns-publieksprijs-04-lr-1.jpg); 
-	background-repeat: no-repeat; 
-	background-position: center;
-	background-size: cover;
-	height: 30em;
-	width: 100%;
-	box-shadow: 0.4em 0.06em 0.4em grey; 
-}
-
-/*NAV BALK*/
-header > nav {
-	background-color: #ffffff; 
-	margin: 0; 
-	height: 3.75em; 
-	width: 100%; 
-	position: fixed; 
-	top: 0;
-}
-
-/*ELEMENTEN IN DE BALK*/
-header > nav > ul {
-	display: flex;
-	align-items: center; /* li items in het midden */
-	padding: 0 1.31em; 
-}
-
-header > nav > ul > li {
-	list-style-type: none; /* geen bolletje voor li items */
-}
-
-header > nav > ul > li > a {
-	text-decoration: none; /* geen link onder text */
-	display: flex; 	/* text in een rij met afbeelding */ 
-	align-items: center; /* in het midden zetten */ 
-	font-family: 'Open Sans', sans-serif; 
-	text-decoration: none;
-	color: rgb(5, 51, 128); 
-}
-
-header > nav > ul > li:nth-of-type(2) {
-	margin-right: auto; /* opschuiven naar de andere kant */
-	padding-left: 0.5em; 
-}
-
-header > nav > ul > li:nth-of-type(4) {
-	margin-left: 0.5em; 
-}
-
-header > nav > ul > li > a > img {
-	width: 2em;
-}
-
-header li:nth-of-type(1) img {
-	width: 3.2em; 
-}
-/*tekst header laten verdwijnen*/
-header > nav > ul > li > a > div {
-	display: none;
+main > form { 
+	background-color: #FFC916; 
+	margin: 0 0.44em; 
+	position: relative; 
+	top: -1.4em;
+	box-shadow: inset 0 -0.15em #E0B200;
+	border-radius: 0.3em;
 }
 @media (min-width: 36em)  {
-	header > nav > ul > li > a > div {
-		display: block; 
+	main > form {
+		margin: 0 0.875em;
+		max-height: 25em; 
+		box-shadow: none; 
+		padding: 1.5em; 
 	}
 }
 
-/*
-============================
-img
-============================
-*/
+main > form > fieldset:first-of-type { 
+	border-style: none;
+	padding: 0;	
+}
 
-main > img {
-	/*margin-top: 4em;*/
-	max-height: 100vh;
+.filters fieldset:nth-of-type(2) {
+	margin-top: 1em; 
 }
 @media (min-width: 36em) {
-	main > img {
-		content: url(img/verhaal.verliefd.tablet.jpg); /*BRON: https://teamtreehouse.com/community/media-queries-and-header-image-swap*/
-		max-height: 100vh;
+	.filters fieldset:nth-of-type(2) {
+		margin-top: 0; 
+	}
+}
+
+.filters { 
+	display: none;
+	margin: 0 1.5em; /*dit eventueel nog veranderen*/
+} 
+@media (min-width: 36em) {
+	.filters {
+	display: grid; 
+	grid-template-columns: 2fr 1fr; 
+	margin: 1em 0 0 0; 
 	}
 }
 @media (min-width: 64em) {
-	main > img {
-		content: url(img/verhaal.verliefd.desktop.jpg); /*BRON: https://teamtreehouse.com/community/media-queries-and-header-image-swap*/
-		max-height: 100vh;
+	.filters {
+	display: grid; 
+	grid-template-columns: 3fr 1fr; 
 	}
+}
+
+main > form > fieldset > legend:first-of-type { 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	text-align: center; 
+	color: #053380;
+	padding: 0.93em 0; 
+} 
+main > form > fieldset > legend:first-of-type:hover {
+	color:#0063D3;
+	cursor: pointer;
+}
+@media (min-width: 36em) {
+	main > form > fieldset > legend:first-of-type {
+		text-align: left; 
+		font-size: 2em;
+		padding: 0;
+	}
+}
+
+.filters > fieldset {
+	border-style: none;
+	margin: 0;  
+	padding: 0; 
+}
+
+.filters > fieldset > legend {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	font-weight: 700;
+	color: #053380;
+	padding: 0.625em 0; 
+}
+
+.filters label {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	color: black; 
+	padding: 0.312em 0;
+}
+
+.filters input {
+	margin-right: 1.25em; 
+}
+
+.filterCategorie label {
+	display: flex; 
+}
+@media (min-width: 36em) {
+	.filterCategorie {
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	}
+}
+@media (min-width: 64em) {
+	.filterCategorie {
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	}
+}
+
+.filterLengte label {
+	display: flex; 
+}
+
+.buttonVerhalen {
+	background-color: #0063D3;
+	color: white;
+	border: none;
+	border-radius: 0.3em;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 0.93em; 
+	padding: 0.61em 1.1em;
+	margin: 1.5em 0;
+	box-shadow: inset 0 -0.15em #004BA0; /* bron inner shadow https://www.cssmatic.com/box-shadow */ 
+	display: block; 
+}
+@media (min-width: 36em) {
+	.buttonVerhalen {
+		width: 9em; 
+		padding: 0.61em 1.1em;
+		margin-bottom: 0; 
+	}
+}
+.buttonVerhalen:hover {
+	background-color: #0a59b2; 
+	transition: 0.6s ease-out; 
+	position: relative; 
+	transform: translateZ(0);
+	}
+.buttonVerhalen:before {
+	content: "";
+    position: absolute; /*zodat het uit beeld komt*/
+    z-index: -1; /*zorgt ervoor dat hij erachter ligt*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0); /*hier is de y kleiner*/
+	transform-origin: bottom;/*gaat tot 100% in de verticale positie https://tympanus.net/codrops/css_reference/transform-origin/*/
+	border-radius: 0.3em;
+	background-color: #0a59b2;
+	transition-property: transform;
+}
+.buttonVerhalen:hover:before {
+	 transform: scaleY(1); /*zorgt ervoor dat de Y groter wordt https://www.w3schools.com/cssref/css3_pr_transform.asp*/
+	 transition: .2s ease-in-out;
+}
+.buttonVerhalen:focus {
+	background-color: #0a59b2;  
+	transition: 0.6s ease-out; 
+	}
+.buttonVerhalen:active {
+	background-color: #094e9e;
+	transition: 0.6s ease-out; 
+	}
+
+.filters { 
+position: relative;
+}
+
+.filters label {
+	cursor: pointer;
+}
+
+.CustomCheckbox input {
+	opacity: 0; 
+}
+
+.CustomCheckbox label::before {
+	content: ""; 
+	display: inline-block; 
+	height: 1.25em; 
+	width: 1.25em; 
+	background-color: white; 
+}
+
+.CustomCheckbox label::after {
+	content: "";
+	display: inline-block; 
+	height: 0.4em; 
+	width: 0.8em; 
+	border-left: 0.11em solid; 
+	border-bottom: 0.11em solid; 
+	transform: rotate(-45deg); 
+	color: green; 
+	
+}
+
+.CustomCheckbox label {
+	position: relative; 
+}
+
+.CustomCheckbox label::before,
+.CustomCheckbox label::after {
+    position: absolute;
+}
+
+/*Outer-box*/
+.CustomCheckbox label::before {
+    top: 3px;
+}
+/*Checkmark*/
+.CustomCheckbox label::after {
+    left: 4px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.CustomCheckbox input + label::after {
+    content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.CustomCheckbox input:checked + label::after {
+    content: "";
+}
+
+.CustomCheckbox input:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.CustomCheckbox label {
+	margin-left: 1em; 
+}
+/*bron: https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3*/
+
+
+/*
+.checkbox input {
+	opacity: 0; 
+}
+
+.checkbox label:before {
+	content: ""; 
+	display: inline-block; 
+	width: 1.25em; 
+	height: 1.25em; 
+	border-radius: 0.1em; 
+	background-color: white; 
+}
+
+.checkbox label:after {
+	content: "";
+	display: inline-block; 
+	height: 0.4em; 
+	width: 0.8em; 
+	border-left: 0.11em solid; 
+	border-bottom: 0.11em solid; 
+	transform: rotate(-45deg); 
+	color: green; 
+}
+
+
+.checkbox label:before {
+	position: absolute; 
+}
+
+.checkbox label:after {
+	position: absolute; 
+}
+
+/*
+.checkbox label:before {
+	top: 0.2em; 
+}
+
+
+.checkbox label:after {
+	left: 0.15em;  
+	top: 0.5em; 
+}
+*/
 

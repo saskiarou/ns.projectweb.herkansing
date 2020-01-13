@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web front-end</title>
+	<title>NS verhalen website</title>
 	<link rel="stylesheet" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
 </head>
@@ -13,355 +13,357 @@
 		<nav>
 			<ul>
 				<li><a href="index.html"><img src="img/Nederlandse_Spoorwegen_logo.svg" alt="logo">NS verhalen</a></li>
-				<li><a href="index.html"><img src="img/zoeken.svg" alt="zoeken">
-					<div>Zoeken</div></a></li>
+				<li><a href="index.html"><img src="img/zoeken.svg" alt="zoeken"><div>Zoeken</div></a></li>
 				<li><a href="mijnaccount.html"><img src="img/poppetje.svg" alt="mijn-account"><div>Mijn account</div></a></li>	
 			</ul>
 		</nav>
 		<div></div>
 	</header>
+	 <!--bron afbeelding: ns.nl - bron img(svg) ns.nl-->
 	
 	<main>
-			<form>
-				<fieldset>
-				<legend>Zoekopties</legend>
+		<form>
+			<fieldset>
+			<legend>Zoekopties</legend>
 				<div class="filters">
 					<fieldset>
-				  <legend>Categorie</legend>
-						<div class="filterCategorie">
-							<label><input id="avontuurlijk" type="checkbox"><span class="checkboxCustom"></span>Avontuurlijk</label>
-							<label><input id="correspondentie" type="checkbox"><span class="checkboxCustom"></span>Correspondentie</label>
-							<label><input id="familie" type="checkbox"><span class="checkboxCustom"></span>Familie</label>
-							<label><input id="fantasie" type="checkbox"><span class="checkboxCustom"></span>Fantasie</label>
-							<label><input id="gezondheid" type="checkbox"><span class="checkboxCustom"></span>Gezondheid</label>
-							<label><input id="komedie" type="checkbox"><span class="checkboxCustom"></span>Komedie</label>
-							<label><input id="kunst" type="checkbox"><span class="checkboxCustom"></span>Kunst</label>
-							<label><input id="maatschappelijk" type="checkbox"><span class="checkboxCustom"></span>Maatschappelijk</label>
-							<label><input id="nurks" type="checkbox"><span class="checkboxCustom"></span>Nurks</label>
-							<label><input id="personen" type="checkbox"><span class="checkboxCustom"></span>Personen</label>
-							<label><input id="politiek" type="checkbox"><span class="checkboxCustom"></span>Politiek</label>
-							<label><input id="romantiek" type="checkbox"><span class="checkboxCustom"></span>Romantiek</label>
-							<label><input id="sport" type="checkbox"><span class="checkboxCustom"></span>Sport</label>
+				 		<legend>Categorie</legend>
+							<div class="filterCategorie">
+								<label><input id="avontuurlijk" type="checkbox"><span class="checkboxCustom"></span>Avontuurlijk</label>
+								<label><input id="correspondentie" type="checkbox"><span class="checkboxCustom"></span>Correspondentie</label>
+								<label><input id="familie" type="checkbox"><span class="checkboxCustom"></span>Familie</label>
+								<label><input id="fantasie" type="checkbox"><span class="checkboxCustom"></span>Fantasie</label>
+								<label><input id="gezondheid" type="checkbox"><span class="checkboxCustom"></span>Gezondheid</label>
+								<label><input id="komedie" type="checkbox"><span class="checkboxCustom"></span>Komedie</label>
+								<label><input id="kunst" type="checkbox"><span class="checkboxCustom"></span>Kunst</label>
+								<label><input id="maatschappelijk" type="checkbox"><span class="checkboxCustom"></span>Maatschappelijk</label>
+								<label><input id="nurks" type="checkbox"><span class="checkboxCustom"></span>Nurks</label>
+								<label><input id="personen" type="checkbox"><span class="checkboxCustom"></span>Personen</label>
+								<label><input id="politiek" type="checkbox"><span class="checkboxCustom"></span>Politiek</label>
+								<label><input id="romantiek" type="checkbox"><span class="checkboxCustom"></span>Romantiek</label>
+								<label><input id="sport" type="checkbox"><span class="checkboxCustom"></span>Sport</label>
 							</div>
 					</fieldset>
 					<fieldset>
 						<legend>Lengte</legend>
 							<div class="filterLengte">
-							<label><input id="kort" type="checkbox"><span class="checkboxCustom"></span>Kort</label>
-							<label><input id="middel" type="checkbox"><span class="checkboxCustom"></span>Middel</label>
-							<label><input id="lang" type="checkbox"><span class="checkboxCustom"></span>Lang</label>
-							</div>
+								<label><input id="kort" type="checkbox"><span class="checkboxCustom"></span>Kort</label>
+								<label><input id="middel" type="checkbox"><span class="checkboxCustom"></span>Middel</label>
+								<label><input id="lang" type="checkbox"><span class="checkboxCustom"></span>Lang</label>
+								</div>
 					</fieldset>
 					<button class="buttonVerhalen">Toon verhalen</button>
-					</div>
+				</div>
 			</fieldset>
 		</form>
-			
-<!--bron voor het gebruik van de custom checkboxen: https://medium.com/mobile-app-developers/styling-checkbox-css-tips-e103c54ea1c7 */-->
+		<!--bron voor het gebruik van de custom checkboxen: https://medium.com/mobile-app-developers/styling-checkbox-css-tips-e103c54ea1c7 - Onder verhaal 'moe' is een andere optie te vinden, waarbij de focus het wel deed, maar weer andere problemen kwamen die ik niet kon oplossen. */-->
 				
 		<section>
-			<article>
-				<div>
-					<img src="img/verhaal.nichterig-01.jpg" alt="Beeld verhaal nichterig">
-				</div>
-				<div>
-					<h3>Nichterig</h3>
-					<footer>
-						<img src="img/5star-01-01.svg" alt="beoordeling 5 sterren">
-						<p>(56)</p>
-					</footer>
-					<p>Dus ik stap de bus uit, met mijn zoon in mijn wagen, en ik schrik me daar toch het apenlazarus zeg! Werkelijk heel de omgeving rond Centraal Station is open gebroken!...</p>
-					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
-			
-			<article>
-			<div>
-				<img src="img/moe.beeldscherm_desktop1.png" alt="Beeld verhaal Moe">
-			</div>
-			<div>
-				<h3>Moe</h3>
-				<footer>
-					<img src="img/4star-01-01.svg" alt="beoordeling 4 sterren">
-					<p>(23)</p>
-				</footer>
-				<p>De buschauffeur port me wakker. We zijn bij de eindhalte, Centraal Station. Ik stap uit en duw de kinderwagen voort waarin mijn zoon ligt te slapen. Ik wou dat ik hem was. De mensen lopen in zichzelf gekeerd over het plein...</p>
-				<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
-			
-			<article>
-				<div>
-					<img src="img/verhaal.verliefd-01.jpg" alt="Beeld verhaal nichterig">
-				</div>
-				<div>
-					<h3>Verliefd</h3>
-					<footer>
-						<img src="img/4star-01-01.svg" alt="beoordeling 4 sterren">
-						<p>(28)</p>
-					</footer>
-					<p>Licht van mijn leven. Ik stapte vandaag bus 21 uit. Het was op het midden van de dag. En wat een heerlijke dag! Het was twaalf uur, onze fantastische zoon sliep net...</p>
-					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
-			
-			<article>
-				<div>
-					<img src="img/telegrafisch.JPG" alt="Beeld verhaal telegrafisch"> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
-				</div>
-				<div>
-					<h3>Telegrafisch</h3>
-					<footer>
-						<img src="img/3star-01-01.svg" alt="beoordeling 3 sterren">
-						<p>(13)</p>
-					</footer>
-					<p>Bus stopt stop naar bibliotheek voor stijloefeningen stop van Raymond Queneau stop regen en wind mensen in zichzelf gekeerd stop modderige teringzooi hier stop drilboren en heipalen teisteren trommelvliezen...</p>
-					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
-			
-			<article>
-				<div>
-					<img src="img/Kinderboek2.jpg" alt="Beeld verhaal kinderboek"> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
-				</div>
-				<div>
-					<h3>Kinderboek</h3>
-					<footer>
-						<img src="img/5star-01-01.svg" alt="beoordeling 5 sterren">
-						<p>(14)</p>
-					</footer>
-					<p>Kijk, daar gaat Max. Dag Max! Hij stapt uit de bus. Wat duwt hij daar vooruit? Jawel, een heuse kinderwagen! En wat voor één! Een groene! Zijn zoontje ligt er in te slapen...</p>
-					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
+			<h1>99 verhalen</h1>
+				<article>
+					<div>
+						<a href="verhaal.nichterig.ns.html"><img src="img/verhaal.nichterig-01.jpg" alt="Beeld verhaal nichterig"> </a><!--bron img: zelf gemaakt -->
 					</div>
-			</article>
-			
+					<div>
+						<h2>Nichterig</h2>
+						<footer>
+							<img src="img/5star-01-01.svg" alt="beoordeling 5 sterren">
+							<p>(56)</p>
+						</footer>
+						<p>Dus ik stap de bus uit, met mijn zoon in mijn wagen, en ik schrik me daar toch het apenlazarus zeg! Werkelijk heel de omgeving rond Centraal Station is open gebroken!...</p>
+						<footer>
+							<a href="verhaal.nichterig.ns.html">Lees meer</a>
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+										<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+
 				<article>
 				<div>
-					<img src="img/boers.JPG" alt="Beeld verhaal boers"> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
+					<a href="verhaal.moe.ns.html"><img src="img/moe.beeldscherm_desktop1.png" alt="Beeld verhaal Moe"></a> <!--bron img: zelf gemaakt -->
 				</div>
 				<div>
-					<h3>Boers</h3>
+					<h2>Moe</h2>
 					<footer>
 						<img src="img/4star-01-01.svg" alt="beoordeling 4 sterren">
-						<p>(49)</p>
+						<p>(23)</p>
 					</footer>
-					<p>Ik stap dus op ut stationsplein in dieën groâte stad uut dieën bus, met mien zoân in zijne keierwoâguh. Mien zoân sloâpt. Gelaik n’n roâske. Ut regent en ut woâit...</p>
+					<p>De buschauffeur port me wakker. We zijn bij de eindhalte, Centraal Station. Ik stap uit en duw de kinderwagen voort waarin mijn zoon ligt te slapen. Ik wou dat ik hem was. De mensen lopen in zichzelf gekeerd over het plein...</p>
 					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
+							<a href="verhaal.moe.ns.html">Lees meer</a>
+							<a href="verhaal.moe.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
 									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
 									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+
+				<article>
+					<div>
+						<a href="verhaal.verliefd.ns.html"><img src="img/verhaal.verliefd-01.jpg" alt="Beeld verhaal verliefd"> </a><!--bron img: zelf gemaakt -->
+					</div>
+					<div>
+						<h2>Verliefd</h2>
+						<footer>
+							<img src="img/4star-01-01.svg" alt="beoordeling 4 sterren">
+							<p>(28)</p>
+						</footer>
+						<p>Licht van mijn leven. Ik stapte vandaag bus 21 uit. Het was op het midden van de dag. En wat een heerlijke dag! Het was twaalf uur, onze fantastische zoon sliep net...</p>
+						<footer>
+							<a href="verhaal.verliefd.ns.html">Lees meer</a>
+							<a href="verhaal.verliefd.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+
+				<article>
+					<div>
+						<a href="verhaal.nichterig.ns.html"><img src="img/telegrafisch.JPG" alt="Beeld verhaal telegrafisch"></a> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
+					</div>
+					<div>
+						<h2>Telegrafisch</h2>
+						<footer>
+							<img src="img/3star-01-01.svg" alt="beoordeling 3 sterren">
+							<p>(13)</p>
+						</footer>
+						<p>Bus stopt stop naar bibliotheek voor stijloefeningen stop van Raymond Queneau stop regen en wind mensen in zichzelf gekeerd stop modderige teringzooi hier stop drilboren en heipalen teisteren trommelvliezen...</p>
+						<footer>
+							<a href="verhaal.nichterig.ns.html">Lees meer</a>
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+
+				<article>
+					<div>
+						<a href="verhaal.nichterig.ns.html"><img src="img/Kinderboek2.jpg" alt="Beeld verhaal kinderboek"></a> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
+					</div>
+					<div>
+						<h2>Kinderboek</h2>
+						<footer>
+							<img src="img/5star-01-01.svg" alt="beoordeling 5 sterren">
+							<p>(14)</p>
+						</footer>
+						<p>Kijk, daar gaat Max. Dag Max! Hij stapt uit de bus. Wat duwt hij daar vooruit? Jawel, een heuse kinderwagen! En wat voor één! Een groene! Zijn zoontje ligt er in te slapen...</p>
+						<footer>
+							<a href="verhaal.nichterig.ns.html">Lees meer</a>
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+						</div>
+					</article>
+
+					<article>
+					<div>
+						<a href="verhaal.nichterig.ns.html"><img src="img/boers.JPG" alt="Beeld verhaal boers"></a> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
+					</div>
+					<div>
+						<h2>Boers</h2>
+						<footer>
+							<img src="img/4star-01-01.svg" alt="beoordeling 4 sterren">
+							<p>(49)</p>
+						</footer>
+						<p>Ik stap dus op ut stationsplein in dieën groâte stad uut dieën bus, met mien zoân in zijne keierwoâguh. Mien zoân sloâpt. Gelaik n’n roâske. Ut regent en ut woâit...</p>
+						<footer>
+							<a href="verhaal.nichterig.ns.html">Lees meer</a>
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+
+				<article>
+					<div>
+						<a href="verhaal.nichterig.ns.html"><img src="img/203386732_44ec4656cc_o.jpg" alt="Beeld verhaal passie van max"></a> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
+					</div>
+					<div>
+						<h2>De passie van Max</h2>
+						<footer>
+							<img src="img/3star-01-01.svg" alt="beoordeling 3 sterren">
+							<p>(36)</p>
+						</footer>
+						<p>Ik klamp me vast aan het wagentje van mijn zoon. Hij slaapt. De busrit heb ik overleefd. Het is rond het middaguur, de mensen lopen langs ons heen, zonder ons op te merken. Niemand steekt een hand uit...</p>
+						<footer>
+							<a href="verhaal.nichterig.ns.html">Lees meer</a>
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
+								</svg>
+							</a>
+							<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
+							<a href="verhaal.nichterig.ns.html">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+									<style type="text/css">
+										.st0{fill:#053380;}
+									</style>
+									<g>
+										<g>
+											<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
+												s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
+										</g>
+									</g>
+										<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
+										C18,24.4,17.8,24.6,17.5,24.6z"/>
+										<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
+								</svg>
+							</a>
+							<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
+						</footer>
+					</div>
+				</article>
+			</section>
+			<!--bron svg plus, comment en sterren: ns.nl -->
 			
-			<article>
-				<div>
-					<img src="img/203386732_44ec4656cc_o.jpg" alt="Beeld verhaal passie van max"> <!--bron img: ontworpen door mijn klasgenoot Francesco de Lange-->
-				</div>
-				<div>
-					<h3>De passie van Max</h3>
-					<footer>
-						<img src="img/3star-01-01.svg" alt="beoordeling 3 sterren">
-						<p>(36)</p>
-					</footer>
-					<p>Ik klamp me vast aan het wagentje van mijn zoon. Hij slaapt. De busrit heb ik overleefd. Het is rond het middaguur, de mensen lopen langs ons heen, zonder ons op te merken. Niemand steekt een hand uit...</p>
-					<footer>
-						<a href="verhaal.nichterig.ns.html">Lees meer</a>
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<path class="st0" d="M24.1,7.6H10.9c-1.4,0-2.5,1.1-2.5,2.5v11.6c0,1.4,1.1,2.5,2.5,2.5h0.8v-0.8h-0.8c-0.9,0-1.7-0.7-1.7-1.7V10.1 c0-0.9,0.7-1.7,1.7-1.7h13.2c0.9,0,1.7,0.7,1.7,1.7v11.6c0,0.9-0.7,1.7-1.7,1.7H15l-0.9,0.8h10c1.4,0,2.5-1.1,2.5-2.5V10.1 C26.6,8.7,25.5,7.6,24.1,7.6z M14.2,23.4l-1.9,2.1v-2.1h-0.6v4.1l3.3-4.1H14.2z"/>
-							</svg>
-						</a>
-						<!--<img src="img/comment.svg" alt="comments verhaal"></a>-->
-						<a href="verhaal.nichterig.ns.html">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
-								<style type="text/css">
-									.st0{fill:#053380;}
-								</style>
-								<g>
-									<g>
-										<path class="st0" d="M17.5,27.5c-5.5,0-10-4.5-10-10s4.5-10,10-10s10,4.5,10,10S23,27.5,17.5,27.5z M17.5,8.5c-5,0-9,4-9,9
-											s4,9,9,9s9-4,9-9S22.5,8.5,17.5,8.5z"/>
-									</g>
-								</g>
-									<path class="st0" d="M17.5,24.6L17.5,24.6c-0.3,0-0.5-0.2-0.5-0.5V10.8c0-0.3,0.2-0.5,0.5-0.5l0,0c0.3,0,0.5,0.2,0.5,0.5v13.3
-									C18,24.4,17.8,24.6,17.5,24.6z"/>
-									<path class="st0" d="M24.7,17.4L24.7,17.4c0,0.3-0.2,0.5-0.5,0.5H10.9c-0.3,0-0.5-0.2-0.5-0.5l0,0c0-0.3,0.2-0.5,0.5-0.5h13.3 C24.4,16.9,24.7,17.2,24.7,17.4z"/>
-							</svg>
-						</a>
-						<!--<img src="img/plusje.svg" alt="verhaal toevoegen"></a>-->
-					</footer>
-				</div>
-			</article>
-		</section>
-			</main>
+		</main>
 
 		<script src="script/script.js"></script>
 </body>

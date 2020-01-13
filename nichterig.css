@@ -44,15 +44,18 @@ header > nav > ul > li > a {
 
 header > nav > ul > li > a:hover {
 	color: #0063D3;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li > a:focus {
 	color: #0063D3;
 	padding-right: 0.2em; 
+	transition: .3s ease-in;
 }
 
 header > nav > ul > li > a:active {
 	color: #094e9e;
+	transition: .6s ease-in; 
 }
 
 header > nav > ul > li:first-of-type a:focus {
@@ -100,7 +103,6 @@ header > nav > ul > li > a > div {
 	}
 }
 
-
 /*
 ============================
 img
@@ -121,3 +123,4 @@ main > img {
 		content: url(img/verhaal.nichterig.desktop.jpg); /*BRON: https://teamtreehouse.com/community/media-queries-and-header-image-swap*/
 	}
 }
+
